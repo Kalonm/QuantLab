@@ -13,6 +13,7 @@ The repository is deliberately modular – most scripts can be executed standalo
 | Path | Description |
 | --- | --- |
 | `main.py` | Minimal example that iterates over the configured timeframes once MT5 is initialised. |
+| `pipeline_runner.py` | Roadmap-aligned modelling pipeline covering foundational supervised learning baselines. |
 | `config/timeframes.json` | Declares the bar windows and MT5 constants used throughout the toolkit. |
 | `config/pairs.json` | Large universe of symbol pairs to scan/backtest. |
 | `config/settings.py` | Loads JSON config and exposes `TIMEFRAMES` and `PAIRS` for other modules. |
@@ -88,6 +89,19 @@ print(f"Results saved to {bt_path}")
 ```
 
 The helper returns a CSV in `data/backtests/` containing the rolling hedge parameters, positions, PnL decomposition, and cumulative equity curve for the pair.
+
+## Run the roadmap modelling pipeline
+
+The `pipeline_runner.py` script begins operationalising the research roadmap by focussing on the "Foundational supervised learning" workstream. It performs four stages: CSV ingestion, numeric feature preparation, baseline regression models (OLS, Ridge, LASSO, Elastic Net), and metric reporting.
+
+```bash
+python pipeline_runner.py \
+  --dataset data/processed/pair_scan_summary.csv \
+  --target half_life_bars \
+  --output reports/baseline_regression_metrics.json
+```
+
+The output JSON includes timestamped metrics for each baseline model so future stages (tree ensembles, GARCH models, risk analytics, etc.) can be compared as they come online.
 
 ## Tips
 
