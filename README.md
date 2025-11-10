@@ -105,6 +105,10 @@ The regression stage now exposes knobs for the regularised models so you can qui
 
 The output JSON includes timestamped metrics for each baseline model so future stages (tree ensembles, GARCH models, risk analytics, etc.) can be compared as they come online.
 
+## Process documentation
+
+- [Current-state assessment](docs/process/current_state.md) – snapshot of data, platform, and process maturity to inform planning.
+
 ## Tips
 
 - Store raw data under version control sparingly; the `data/` directory can grow quickly.
