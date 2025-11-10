@@ -8,7 +8,7 @@ from pathlib import Path
 from quantlab.pipeline import Pipeline, PipelineContext
 from quantlab.pipeline.data_ingestion import CSVIngestionStage
 from quantlab.pipeline.feature_engineering import NumericFeatureSelectorStage
-from quantlab.pipeline.modeling import BaselineRegressionStage
+from quantlab.src.machine_learning.supervised import BaselineRegressionStage
 from quantlab.pipeline.reporting import MetricsReportingStage
 
 
@@ -26,7 +26,7 @@ def build_pipeline(dataset: Path, target: str, output: Path) -> Pipeline:
 def parse_args() -> argparse.Namespace:
     """CLI argument parser for the pipeline runner."""
 
-    parser = argparse.ArgumentParser(description="Run the QuantLab roadmap-aligned pipeline.")
+    parser = argparse.ArgumentParser(description="Run the QuantLab modular pipeline.")
     parser.add_argument(
         "--dataset",
         type=Path,
