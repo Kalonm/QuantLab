@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Dict, List
 
 import numpy as np
+from sklearn.base import BaseEstimator
 from sklearn.linear_model import ElasticNet, Lasso, LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
@@ -20,6 +21,12 @@ class BaselineRegressionStage:
     test_size: float = 0.2
     random_state: int = 42
     include_regularised: bool = True
+    ridge_alpha: float = 1.0
+    lasso_alpha: float = 0.001
+    lasso_max_iter: int = 10000
+    elastic_net_alpha: float = 0.001
+    elastic_net_l1_ratio: float = 0.5
+    elastic_net_max_iter: int = 10000
     name: str = "baseline_regression"
     description: str = "Fit roadmap baseline supervised models on selected features."
     domain: str = "Machine Learning & AI"
@@ -41,15 +48,19 @@ class BaselineRegressionStage:
             features, target, test_size=self.test_size, random_state=self.random_state
         )
 
-        models: Dict[str, LinearRegression] = {
+        models: Dict[str, BaseEstimator] = {
             "ols": LinearRegression(),
         }
         if self.include_regularised:
             models.update(
                 {
-                    "ridge": Ridge(alpha=1.0),
-                    "lasso": Lasso(alpha=0.001, max_iter=10000),
-                    "elastic_net": ElasticNet(alpha=0.001, l1_ratio=0.5, max_iter=10000),
+                    "ridge": Ridge(alpha=self.ridge_alpha),
+                    "lasso": Lasso(alpha=self.lasso_alpha, max_iter=self.lasso_max_iter),
+                    "elastic_net": ElasticNet(
+                        alpha=self.elastic_net_alpha,
+                        l1_ratio=self.elastic_net_l1_ratio,
+                        max_iter=self.elastic_net_max_iter,
+                    ),
                 }
             )
 
