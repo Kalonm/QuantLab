@@ -1,6 +1,32 @@
-# QuantLab Research Roadmap
+# QuantLab Research Roadmap Review
 
-This document captures the planned modelling and analytics scope for QuantLab. It organises the topics into thematic sections so implementation workstreams can be prioritised and tracked.
+This document consolidates the prospective modelling and analytics scope for QuantLab **and** captures the review notes from the latest assessment of that scope. The intent is to keep the aspirational backlog while surfacing near-term actions, sequencing considerations, and observable gaps so implementation workstreams can be prioritised and tracked.
+
+## Executive Summary
+
+- **Breadth:** The roadmap spans twelve domains ranging from classical supervised learning to optimisation, risk, and numerical methods. The coverage is comprehensive, but several themes overlap (e.g., Kalman filtering appears in multiple sections) and the lack of prioritisation obscures what should be tackled first.
+- **Depth:** Most entries are high-level bullet points without references to current repository capabilities, datasets, or infrastructure, making it difficult to estimate effort or identify prerequisite work.
+- **Actionability:** Immediate next steps are not specified. Introducing status, priority, and ownership metadata will make the document more operational.
+
+### Quick Triage Matrix
+
+| Area | Status | Priority | Notes |
+| --- | --- | --- | --- |
+| Foundational supervised learning (OLS, GLMs) | Not started | High | Forms baseline for multiple downstream models; needs data audit and evaluation framework. |
+| Tree & ensemble methods | Not started | Medium | Useful for benchmark accuracy; depends on feature engineering utilities. |
+| Time-series volatility (GARCH family) | Not started | High | Directly tied to trading risk; requires time-series data cleaning pipelines. |
+| Market microstructure models | Not started | Medium | Requires order book simulation infrastructure and event timestamp alignment. |
+| Optimisation & control | Not started | Medium | Blocked until portfolio datasets and constraints are catalogued. |
+| Risk analytics (VaR / CVaR) | Not started | High | Critical for compliance; needs integration with reporting layer. |
+
+### Immediate Recommendations
+
+1. **Instrument the backlog:** Add issue tracker entries that map the bullet lists below into actionable tickets with clear deliverables, data sources, and validation strategies.
+2. **Define prerequisites:** Capture shared infrastructure requirements (feature store, backtesting harness, evaluation metrics) to avoid redundant implementation.
+3. **Stage delivery:** Propose phased releases (Foundational ML → Time-series core → Risk analytics) so stakeholders can see value incrementally.
+4. **Document current state:** Add a short subsection per topic indicating existing assets or knowledge gaps, even if the status is "not started".
+
+The remainder of this document retains the full backlog for completeness.
 
 ## 1. Machine Learning & AI
 ### 1.1 Supervised Learning (Tabular / Numeric)
