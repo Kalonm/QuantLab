@@ -1,4 +1,4 @@
-"""Supervised learning models covering roadmap section 1.1."""
+"""Supervised learning models supporting QuantLab baseline experiments."""
 
 from __future__ import annotations
 
@@ -111,7 +111,7 @@ class BaselineRegressionStage:
     poisson_max_iter: int = 1000
     negative_binomial_alpha: float = 1.0
     name: str = "baseline_regression"
-    description: str = "Fit roadmap baseline supervised models on selected features."
+    description: str = "Fit baseline supervised models on selected features."
     domain: str = "Machine Learning & AI"
     focus_area: str = "1.1 Supervised Learning"
     prerequisites: List[str] = field(default_factory=lambda: [

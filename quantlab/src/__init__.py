@@ -1,4 +1,4 @@
-"""Modules aligned with the QuantLab research roadmap."""
+"""Core QuantLab source modules."""
 
 from . import machine_learning
 

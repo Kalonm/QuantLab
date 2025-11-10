@@ -1,4 +1,4 @@
-"""Tree and ensemble learning models covering roadmap section 1.2."""
+"""Tree and ensemble learning models for QuantLab experiments."""
 
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ __all__ = ["TreeAndEnsembleStage"]
 
 @dataclass
 class TreeAndEnsembleStage:
-    """Train tree-based and ensemble models from the roadmap backlog."""
+    """Train tree-based and ensemble models maintained in the QuantLab backlog."""
 
     test_size: float = 0.2
     random_state: int = 42
@@ -55,7 +55,7 @@ class TreeAndEnsembleStage:
     catboost_learning_rate: float = 0.05
     catboost_iterations: int = 400
     name: str = "tree_ensemble_models"
-    description: str = "Fit tree-based and ensemble models spanning roadmap section 1.2."
+    description: str = "Fit tree-based and ensemble models spanning the QuantLab backlog."
     domain: str = "Machine Learning & AI"
     focus_area: str = "1.2 Tree & Ensemble Methods"
     prerequisites: List[str] = field(default_factory=lambda: [
