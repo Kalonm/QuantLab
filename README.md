@@ -101,6 +101,8 @@ python pipeline_runner.py \
   --output reports/baseline_regression_metrics.json
 ```
 
+The regression stage now exposes knobs for the regularised models so you can quickly explore different strengths of shrinkage without rewriting the pipeline. Instantiate `BaselineRegressionStage` directly (or subclass it) and adjust arguments such as `ridge_alpha`, `lasso_alpha`, or `elastic_net_l1_ratio` before passing the stage into your custom pipeline layout.
+
 The output JSON includes timestamped metrics for each baseline model so future stages (tree ensembles, GARCH models, risk analytics, etc.) can be compared as they come online.
 
 ## Tips
