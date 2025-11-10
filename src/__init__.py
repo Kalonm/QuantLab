@@ -1,5 +1,5 @@
 """Core QuantLab source modules."""
 
-from . import machine_learning
+from . import inference, machine_learning, models, probability
 
-__all__ = ["machine_learning"]
+__all__ = ["inference", "machine_learning", "models", "probability"]
