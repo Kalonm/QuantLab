@@ -8,7 +8,7 @@ from pathlib import Path
 from quantlab.pipeline import Pipeline, PipelineContext
 from quantlab.pipeline.data_ingestion import CSVIngestionStage
 from quantlab.pipeline.feature_engineering import NumericFeatureSelectorStage
-from quantlab.pipeline.modeling import BaselineRegressionStage
+from quantlab.roadmap.machine_learning.supervised import BaselineRegressionStage
 from quantlab.pipeline.reporting import MetricsReportingStage
 
 
