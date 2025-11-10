@@ -1,0 +1,7 @@
+python -m venv venv
+venv/Scripts/activate
+pip install numpy pandas scipy statsmodels scikit-learn matplotlib
+python.exe -m pip install --upgrade pip
+pip freeze > requirements.txt
+
+python -m spacy download en_core_web_trf  # or en_core_web_sm for lighter

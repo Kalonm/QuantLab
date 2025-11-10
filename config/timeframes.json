@@ -1,0 +1,139 @@
+{
+  "timeframes": [
+    {
+      "name": "M5",
+      "mt5_constant": "TIMEFRAME_M5",
+      "bars": {
+        "short": 4320,
+        "medium": 12960,
+        "long": 52560
+      }
+    },
+    {
+      "name": "M10",
+      "mt5_constant": "TIMEFRAME_M10",
+      "bars": {
+        "short": 4320,
+        "medium": 12960,
+        "long": 52560
+      }
+    },
+    {
+      "name": "M15",
+      "mt5_constant": "TIMEFRAME_M15",
+      "bars": {
+        "short": 2880,
+        "medium": 8640,
+        "long": 35040
+      }
+    },
+    {
+      "name": "M20",
+      "mt5_constant": "TIMEFRAME_M20",
+      "bars": {
+        "short": 2160,
+        "medium": 6480,
+        "long": 26280
+      }
+    },
+    {
+      "name": "M30",
+      "mt5_constant": "TIMEFRAME_M30",
+      "bars": {
+        "short": 1440,
+        "medium": 4320,
+        "long": 17520
+      }
+    },
+    {
+      "name": "H1",
+      "mt5_constant": "TIMEFRAME_H1",
+      "bars": {
+        "short": 720,
+        "medium": 2160,
+        "long": 8760
+      }
+    },
+    {
+      "name": "H2",
+      "mt5_constant": "TIMEFRAME_H2",
+      "bars": {
+        "short": 360,
+        "medium": 1080,
+        "long": 4380
+      }
+    },
+    {
+      "name": "H3",
+      "mt5_constant": "TIMEFRAME_H3",
+      "bars": {
+        "short": 240,
+        "medium": 720,
+        "long": 2920
+      }
+    },
+    {
+      "name": "H4",
+      "mt5_constant": "TIMEFRAME_H4",
+      "bars": {
+        "short": 180,
+        "medium": 540,
+        "long": 2190
+      }
+    },
+    {
+      "name": "H6",
+      "mt5_constant": "TIMEFRAME_H6",
+      "bars": {
+        "short": 120,
+        "medium": 360,
+        "long": 1460
+      }
+    },
+    {
+      "name": "H8",
+      "mt5_constant": "TIMEFRAME_H8",
+      "bars": {
+        "short": 90,
+        "medium": 270,
+        "long": 1095
+      }
+    },
+    {
+      "name": "H12",
+      "mt5_constant": "TIMEFRAME_H12",
+      "bars": {
+        "short": 60,
+        "medium": 180,
+        "long": 730
+      }
+    },
+    {
+      "name": "D1",
+      "mt5_constant": "TIMEFRAME_D1",
+      "bars": {
+        "short": 30,
+        "medium": 90,
+        "long": 365
+      }
+    },
+    {
+      "name": "W1",
+      "mt5_constant": "TIMEFRAME_W1",
+      "bars": {
+        "short": 104,
+        "medium": 260,
+        "long": 520
+      }
+    },
+    {
+      "name": "MN1",
+      "mt5_constant": "TIMEFRAME_MN1",
+      "bars": {
+        "short": 60,
+        "medium": 120,
+        "long": 240
+      }
+    }
+  ]
+}
